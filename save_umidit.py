@@ -5,9 +5,10 @@
 from __future__ import print_function
 import serial, io, datetime
 
-addr  = '/dev/ttyUSB0'  # serial port to read data from
+# addr  = '/dev/ttyUSB0'  # serial port to read data from
+addr  = '/dev/ttyACM0'  # serial port to read data from
 baud  = 9600            # baud rate for serial port
-fname = 'dati11maggio.txt'   # log file to save data in
+fname = 'dati_umidit.txt'   # log file to save data in
 fmode = 'a'             # log file mode = append
 
 with serial.Serial(addr,baud) as pt:
