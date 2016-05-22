@@ -6,15 +6,15 @@ void setup() {
      Serial.begin(9600);
      }
 
-void LedState(int State) {
+void LedState(int state) {
      digitalWrite(13,state);
      }
 
 void loop() {
-     in umidita = analogRead(VAL_PROBE);
+     int umidita = analogRead(VAL_PROBE);
      Serial.println(umidita);
      if (umidita > LIVELLO_UMIDITA) {
-     	LedState(HIGI);
+     	LedState(HIGH);
 	} else {
 	  LedState(LOW);
 	}
